@@ -1,0 +1,49 @@
+name: Bug 反馈 / Bug report
+description: 报告可复现的问题，帮助我们定位并修复。
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先搜索已有 Issues。安全漏洞请通过仓库 Security 页私密报告，不要在此提交密钥、Cookie 或用户数据。
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题描述 / Summary
+      description: 发生了什么？影响哪些功能？
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本或 commit / Version
+      placeholder: 发布版本、commit SHA 或使用日期
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境 / Environment
+      description: 操作系统、浏览器或运行时版本、部署方式等；请勿包含私人地址或凭据。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤 / Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: 期望与实际结果 / Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 脱敏日志、截图或最小示例 / Evidence
+      description: 请移除 token、Cookie、密码和个人信息；不要附上完整生产环境配置。

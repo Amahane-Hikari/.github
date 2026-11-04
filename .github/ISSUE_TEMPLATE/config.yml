@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 使用帮助 / Support
+    url: https://github.com/March7thTeam/.github/blob/main/SUPPORT.md
+    about: 先查文档与已有问题，并选择对应项目反馈。
+  - name: 私密安全报告 / Security
+    url: https://github.com/March7thTeam/.github/blob/main/SECURITY.md
+    about: 安全问题请按指引向受影响仓库私密报告。
