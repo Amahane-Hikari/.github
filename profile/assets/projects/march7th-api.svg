@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 302" width="600" height="302" role="img" aria-labelledby="t d">
+<title id="t">march7th-api</title><desc id="d">march7th-api：自托管 API 目录与模型网关，密钥、限速、积分一站管理</desc>
+<style>
+  text{font-family:'Segoe UI','Helvetica Neue','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif}
+  .m{font-family:ui-monospace,'SFMono-Regular','Cascadia Mono',Consolas,'Liberation Mono',monospace}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A0F1F"/><stop offset="1" stop-color="#141B3A"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF8FC0"/><stop offset="1" stop-color="#8FD3FF"/></linearGradient>
+<linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FD3FF" stop-opacity=".30"/><stop offset=".6" stop-color="#101735"/><stop offset="1" stop-color="#0A0F1F"/></linearGradient>
+<clipPath id="pc"><rect x="14" y="14" width="572" height="164" rx="12"/></clipPath>
+<filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+<style>@keyframes tw{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}@keyframes pulse{50%{opacity:.3}}
+@keyframes run{from{transform:translateX(0)}to{transform:translateX(var(--d,200px))}}
+@keyframes dash{to{stroke-dashoffset:-60}}
+@keyframes sway{50%{transform:translateY(-5px)}}</style>
+</defs>
+<rect width="600" height="302" rx="20" fill="#0E1428"/>
+<rect x="1" y="1" width="598" height="300" rx="19" fill="none" stroke="#8FD3FF" stroke-opacity=".45" stroke-width="1.5"/>
+<g clip-path="url(#pc)">
+  <rect x="14" y="14" width="572" height="164" fill="url(#ph)"/>
+  <g transform="translate(14 14)">
+<g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 40H170L230 82H350" stroke="#8FD3FF"/>
+  <path d="M20 128H150L230 82" stroke="#FF8FC0"/>
+  <path d="M350 82H430L480 40H556" stroke="#B7A6FF"/>
+  <path d="M350 82H430L480 126H556" stroke="#FFD28A"/>
+  <path id="rt" d="M20 40H170L230 82H350H430L480 40H556" stroke="none"/>
+</g>
+<circle cx="20" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="100" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="170" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="20" cy="128" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="150" cy="128" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="480" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="556" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="480" cy="126" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="556" cy="126" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/>
+<g><circle cx="290" cy="82" r="30" fill="#0A0F1F" stroke="#8FD3FF" stroke-width="4"/><circle cx="290" cy="82" r="38" fill="none" stroke="#8FD3FF" stroke-opacity=".35" stroke-dasharray="4 7" style="animation:dash 2s linear infinite"/>
+<text x="290" y="89" class="m" font-size="20" font-weight="700" fill="#EAF2FF" text-anchor="middle">/v1</text></g>
+<g><rect x="-11" y="-6" width="22" height="12" rx="6" fill="#EAF2FF"/><animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#rt"/></animateMotion></g>
+<text x="200" y="152" class="m" font-size="12" fill="#8E9BC2">model · key · credit</text></g>
+</g>
+<path d="M26 44V26H44M556 26H574V44M574 148V166H556M44 166H26V148" fill="none" opacity=".55" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40" y="52" class="m" font-size="14" fill="#fff" opacity=".85" letter-spacing="2">No.01</text>
+<circle cx="520" cy="47" r="4" fill="#7CF0B5" style="animation:pulse 2.4s ease-in-out infinite"/>
+<text x="560" y="52" class="m" font-size="13" fill="#fff" opacity=".85" text-anchor="end">AF</text>
+<text x="28" y="212" class="m" font-size="26" font-weight="700" fill="#EAF2FF">march7th-api</text>
+<text x="572" y="212" font-size="22" fill="#8FD3FF" text-anchor="end">↗</text>
+<text x="28" y="242" font-size="17.5" fill="#8E9BC2">自托管 API 目录与模型网关，密钥、限速、积分一站管理</text>
+<g transform="translate(28 262)"><rect width="67.4" height="26" rx="13" fill="#8FD3FF" fill-opacity=".12" stroke="#8FD3FF" stroke-opacity=".5"/><text x="33.7" y="17.5" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m">Python</text></g><g transform="translate(103.4 262)"><rect width="103.3" height="26" rx="13" fill="#8FD3FF" fill-opacity=".12" stroke="#8FD3FF" stroke-opacity=".5"/><text x="51.65" y="17.5" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m">OpenAI 兼容</text></g><g transform="translate(214.7 262)"><rect width="67.4" height="26" rx="13" fill="#8FD3FF" fill-opacity=".12" stroke="#8FD3FF" stroke-opacity=".5"/><text x="33.7" y="17.5" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m">Docker</text></g>
+</svg>
