@@ -1,27 +1,26 @@
 <p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="March7th：把好奇心写成工具，把想象力做成交互。Web 应用、开发者工具与 Minecraft 自动化。" />
+  <img src="./assets/hero.svg" width="100%" alt="March7th 三月七：一块永不融化的冰里冻着 03.07，冰箭划过夜空，拍立得在周围漂浮。把好奇心写成工具，把想象力做成交互。Web 应用、开发者工具与 Minecraft 自动化。" />
 </p>
 
 <p align="center">
-  <a href="https://march7th.cn"><b>主题站点</b></a> ·
-  <a href="https://github.com/orgs/March7thTeam/repositories"><b>全部仓库</b></a> ·
-  <a href="https://github.com/March7thTeam/.github/blob/main/CONTRIBUTING.md"><b>参与贡献</b></a> ·
-  <a href="https://github.com/March7thTeam/.github/blob/main/SECURITY.md"><b>安全报告</b></a>
+  <a href="https://march7th.cn"><b>✦ 主题站点</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/orgs/March7thTeam/repositories"><b>✦ 全部仓库</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/March7thTeam/.github/blob/main/CONTRIBUTING.md"><b>✦ 参与贡献</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/March7thTeam/.github/blob/main/SECURITY.md"><b>✦ 安全报告</b></a>
 </p>
 
 <p align="center">
-  我们是一个做<b>实用工具</b>和<b>互动作品</b>的小团队：从 API 网关、文件分享，到可视化设计工作台、悬疑解谜和 Minecraft 机器人。<br />
-  每个项目都有线上入口，也都写明了怎么跑、怎么验证、哪些边界我们不碰。
+  <img src="./assets/story.svg" width="100%" alt="名字，来自一块冰：她在一块永不融化的冰里醒来，忘了从前的一切，于是用醒来那天的日期给自己取了名字，再用相机认真记下之后的每一个瞬间。我们借用这个名字：把每个想法都好好保存，做成能用、能玩、也值得回看的作品。" />
 </p>
 
 <br />
 
 <p align="center">
-  <img src="./assets/h-contact.svg" width="100%" alt="01 接触印样：每个项目都是一张值得打印的快照" />
+  <img src="./assets/h-shards.svg" width="100%" alt="01 记忆碎片：每个项目，都是冻住的一个好瞬间" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/March7thTeam/march7th-api"><img src="./assets/projects/march7th-api.svg" width="49%" alt="march7th-api：自托管 API 目录与模型网关，密钥、限速、积分一站管理。Python、OpenAI 兼容、Docker。线上入口 api.march7th.cn" /></a>
+  <a href="https://github.com/March7thTeam/march7th-api"><img src="./assets/projects/march7th-api.svg" width="49%" alt="march7th-api：自托管 API 目录与模型网关，密钥、限速、积分一站管理。Python、OpenAI 兼容、Docker。" /></a>
   <a href="https://github.com/March7thTeam/file-download-proxy"><img src="./assets/projects/file-download-proxy.svg" width="49%" alt="file-download-proxy：只放行白名单域名的流式下载代理，支持 Range，防 SSRF。" /></a>
   <a href="https://github.com/March7thTeam/design-atlas"><img src="./assets/projects/design-atlas.svg" width="49%" alt="design-atlas：浏览器里的前端设计工作台，拼装页面、调整样式、导出源码。" /></a>
   <a href="https://github.com/March7thTeam/fog-harbor-archive"><img src="./assets/projects/fog-harbor-archive.svg" width="49%" alt="fog-harbor-archive：悬疑解谜网页游戏，在雾港调查室里重建证据链。" /></a>
@@ -30,7 +29,7 @@
 </p>
 
 <details>
-  <summary><b>纯文本导航 · 直接去玩 / 直接去看</b></summary>
+  <summary><b>❄ 纯文本导航 · 直接去玩 / 直接去看</b></summary>
   <br />
 
 | 项目 | 在做什么 | 入口 |
@@ -49,21 +48,23 @@
 <br />
 
 <p align="center">
-  <img src="./assets/h-workflow.svg" width="100%" alt="02 暗房手记：我们怎么做事" />
+  <img src="./assets/h-arrows.svg" width="100%" alt="02 四箭定格：我们怎么做事" />
 </p>
 
 <p align="center">
-  <img src="./assets/workflow.svg" width="100%" alt="工作流四步：取景（先想清楚为谁而做）、对焦（原型落在真实页面）、快门（实现与回归测试）、冲洗（独立审查，留存证据，确认之后再上线）。" />
+  <img src="./assets/archery.svg" width="100%" alt="四箭定格：拉弓（先想清楚为谁而做，再定下它的样子）、瞄准（原型落在真实页面，看得见才算数）、放箭（实现与回归测试，每一步都能回退）、定格（独立审查，留存证据，确认之后再上线）。" />
 </p>
 
-我们认的几条规矩，都能在仓库里找到对应的证据：
+每一支箭，都要能在仓库里找到落点：
 
-- **能打开、能用，才算数**：每个项目都有可访问的线上入口或可复现的本地启动步骤，功能与维护状态以各仓库 README 为准。
-- **默认收紧，再逐步放开**：下载代理只放行白名单并在 DNS 解析后拒绝内网目标；API 网关只开放登记过的 `/v1` 接口，其余路径一律拒绝。
-- **结论要有证据**：mc-bot 用同一套 12 项检查在多个服务器类型和版本上逐一实测；雾港档案的每次升级都附检查记录与依赖审计。
-- **改动可回退、旧数据不丢**：存档、报告和截图按版本递增保留，升级不覆盖原始记录。
+| | 我们的规矩 | 仓库里的证据 |
+| :-: | --- | --- |
+| 🏹 | **能打开、能用，才算数** | 每个项目都有线上入口或可复现的本地启动步骤；功能与维护状态以各仓库 README 为准 |
+| 🛡️ | **默认收紧，再逐步放开** | 下载代理只放行白名单，并在 DNS 解析后拒绝内网目标；API 网关只开放登记过的 `/v1` 接口 |
+| 🎯 | **结论要有证据** | mc-bot 用同一套 12 项检查在多种服务器和版本上逐一实测；雾港档案每次升级都附检查记录与依赖审计 |
+| 📸 | **改动可回退，旧数据不丢** | 存档、报告和截图按版本递增保留，升级不覆盖原始记录 |
 
-**手上的工具箱**：`Python` · `FastAPI` · `Next.js 16` · `React 19` · `TypeScript` · `Node.js` · `Mineflayer` · `PostgreSQL` · `Docker` · `Vercel` · `Cloudflare` · `MCP`
+**冰箭袋** &nbsp; `Python` · `FastAPI` · `Next.js 16` · `React 19` · `TypeScript` · `Node.js` · `Mineflayer` · `PostgreSQL` · `Docker` · `Vercel` · `Cloudflare` · `MCP`
 
 <br />
 
@@ -81,7 +82,7 @@
 <br />
 
 <p align="center">
-  <img src="./assets/footer.svg" width="100%" alt="愿每一次按下快门，都留下值得回看的东西。" />
+  <img src="./assets/footer.svg" width="100%" alt="咔嚓——这一刻，存进相册。一面挂满拍立得的照片墙，每张对应一个项目。" />
 </p>
 
-<sub>March7thTeam 是独立的项目协作组织，与 HoYoverse / 米哈游无隶属关系。页面中的相机、冰晶等图形均为原创矢量绘制，不含官方美术素材。代码与素材的使用须遵循各仓库的许可证及第三方授权说明。主页素材由 <code>scripts/build-profile-assets.mjs</code> 生成。</sub>
+<sub>March7thTeam 是独立的项目协作组织，与 HoYoverse / 米哈游无隶属关系。页面中的冰晶、冰箭、日历与拍立得等图形均为原创矢量绘制，不含官方美术素材。代码与素材的使用须遵循各仓库的许可证及第三方授权说明。主页素材由 <code>scripts/build-profile-assets.mjs</code> 生成。</sub>

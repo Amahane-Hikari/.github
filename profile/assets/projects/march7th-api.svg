@@ -1,45 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 302" width="600" height="302" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 330" width="600" height="330" role="img" aria-labelledby="t d">
 <title id="t">march7th-api</title><desc id="d">march7th-api：自托管 API 目录与模型网关，密钥、限速、积分一站管理</desc>
 <style>
   text{font-family:'Segoe UI','Helvetica Neue','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif}
   .m{font-family:ui-monospace,'SFMono-Regular','Cascadia Mono',Consolas,'Liberation Mono',monospace}
+  @keyframes tw{0%,100%{opacity:.15;transform:scale(.55)}50%{opacity:1;transform:scale(1)}}
+  @keyframes bob{50%{transform:translateY(-10px)}}
+  @keyframes pulse{50%{opacity:.3}}
   @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A0F1F"/><stop offset="1" stop-color="#141B3A"/></linearGradient>
+<linearGradient id="bg" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stop-color="#060918"/><stop offset=".5" stop-color="#101538"/><stop offset="1" stop-color="#241848"/></linearGradient>
 <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF8FC0"/><stop offset="1" stop-color="#8FD3FF"/></linearGradient>
-<linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FD3FF" stop-opacity=".30"/><stop offset=".6" stop-color="#101735"/><stop offset="1" stop-color="#0A0F1F"/></linearGradient>
-<clipPath id="pc"><rect x="14" y="14" width="572" height="164" rx="12"/></clipPath>
+<linearGradient id="prism" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="0" spreadMethod="repeat">
+  <stop offset="0" stop-color="#FF8FC0"/><stop offset=".2" stop-color="#FFC6DF"/><stop offset=".38" stop-color="#FFFFFF"/><stop offset=".56" stop-color="#8FD3FF"/><stop offset=".78" stop-color="#B9A8FF"/><stop offset="1" stop-color="#FF8FC0"/>
+  <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="300 0" dur="6s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="tail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8FD3FF" stop-opacity="0"/><stop offset=".7" stop-color="#8FD3FF" stop-opacity=".65"/><stop offset="1" stop-color="#fff"/></linearGradient>
+<linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="crys" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/><stop offset=".45" stop-color="#D2F0FF" stop-opacity=".7"/><stop offset="1" stop-color="#4FA8E8" stop-opacity=".25"/></linearGradient>
+<linearGradient id="auroraP" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF8FC0" stop-opacity="0"/><stop offset=".4" stop-color="#FF8FC0"/><stop offset="1" stop-color="#B9A8FF" stop-opacity="0"/></linearGradient>
+<linearGradient id="auroraI" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8FD3FF" stop-opacity="0"/><stop offset=".6" stop-color="#8FD3FF"/><stop offset="1" stop-color="#8FD3FF" stop-opacity="0"/></linearGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="glowL" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft" x="-20%" y="-100%" width="140%" height="300%"><feGaussianBlur stdDeviation="24"/></filter>
+<linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FD3FF" stop-opacity=".38"/><stop offset=".6" stop-color="#101735"/><stop offset="1" stop-color="#0A0F1F"/></linearGradient>
+<clipPath id="pc"><polygon points="40,14 548,14 586,52 586,184 14,184 14,40"/></clipPath>
+<clipPath id="cc"><polygon points="30,2 556,2 598,44 598,300 570,328 2,328 2,32"/></clipPath>
 <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
-<style>@keyframes tw{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}@keyframes pulse{50%{opacity:.3}}
-@keyframes run{from{transform:translateX(0)}to{transform:translateX(var(--d,200px))}}
+<style>@keyframes run{from{transform:translateX(0)}to{transform:translateX(var(--d,200px))}}
 @keyframes dash{to{stroke-dashoffset:-60}}
 @keyframes sway{50%{transform:translateY(-5px)}}</style>
 </defs>
-<rect width="600" height="302" rx="20" fill="#0E1428"/>
-<rect x="1" y="1" width="598" height="300" rx="19" fill="none" stroke="#8FD3FF" stroke-opacity=".45" stroke-width="1.5"/>
+<g clip-path="url(#cc)">
+<rect width="600" height="330" fill="url(#bg)"/>
 <g clip-path="url(#pc)">
-  <rect x="14" y="14" width="572" height="164" fill="url(#ph)"/>
+  <rect width="600" height="200" fill="url(#ph)"/>
   <g transform="translate(14 14)">
-<g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M20 40H170L230 82H350" stroke="#8FD3FF"/>
-  <path d="M20 128H150L230 82" stroke="#FF8FC0"/>
-  <path d="M350 82H430L480 40H556" stroke="#B7A6FF"/>
-  <path d="M350 82H430L480 126H556" stroke="#FFD28A"/>
-  <path id="rt" d="M20 40H170L230 82H350H430L480 40H556" stroke="none"/>
+<g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+  <path d="M20 50H170L230 92H350" stroke="#8FD3FF"/>
+  <path d="M20 138H150L230 92" stroke="#FF8FC0"/>
+  <path d="M350 92H430L480 50H556" stroke="#B9A8FF"/>
+  <path d="M350 92H430L480 136H556" stroke="#FFD28A"/>
 </g>
-<circle cx="20" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="100" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="170" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="20" cy="128" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="150" cy="128" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="480" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="556" cy="40" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="480" cy="126" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/><circle cx="556" cy="126" r="6.5" fill="#0A0F1F" stroke="#EAF2FF" stroke-width="3"/>
-<g><circle cx="290" cy="82" r="30" fill="#0A0F1F" stroke="#8FD3FF" stroke-width="4"/><circle cx="290" cy="82" r="38" fill="none" stroke="#8FD3FF" stroke-opacity=".35" stroke-dasharray="4 7" style="animation:dash 2s linear infinite"/>
-<text x="290" y="89" class="m" font-size="20" font-weight="700" fill="#EAF2FF" text-anchor="middle">/v1</text></g>
-<g><rect x="-11" y="-6" width="22" height="12" rx="6" fill="#EAF2FF"/><animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#rt"/></animateMotion></g>
-<text x="200" y="152" class="m" font-size="12" fill="#8E9BC2">model · key · credit</text></g>
+<path id="rt" d="M20 50H170L230 92H350H430L480 50H556" fill="none"/>
+<path id="rt2" d="M20 138H150L230 92H350H430L480 136H556" fill="none"/>
+<circle cx="20" cy="50" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/><circle cx="100" cy="50" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/><circle cx="170" cy="50" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/><circle cx="20" cy="138" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/><circle cx="150" cy="138" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/><circle cx="480" cy="50" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/><circle cx="556" cy="50" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/><circle cx="480" cy="136" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/><circle cx="556" cy="136" r="6.5" fill="#0A0F1F" stroke="#F0F5FF" stroke-width="3"/>
+<g><circle cx="290" cy="92" r="30" fill="#0A0F1F" stroke="#8FD3FF" stroke-width="4" filter="url(#glow)"/><circle cx="290" cy="92" r="38" fill="none" stroke="#8FD3FF" stroke-opacity=".5" stroke-dasharray="4 7" style="animation:dash 2s linear infinite"/>
+<text x="290" y="99" class="m" font-size="20" font-weight="700" fill="#F0F5FF" text-anchor="middle">/v1</text></g>
+<g filter="url(#glow)"><rect x="-11" y="-6" width="22" height="12" rx="6" fill="#fff"/><animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#rt"/></animateMotion></g>
+<g filter="url(#glow)"><rect x="-11" y="-6" width="22" height="12" rx="6" fill="#FFC6DF"/><animateMotion dur="6s" begin="-2s" repeatCount="indefinite" rotate="auto"><mpath href="#rt2"/></animateMotion></g>
+<text x="200" y="162" class="m" font-size="12" fill="#9AA6CC">model · key · credit</text></g>
+  <g transform="translate(14 14)"><g opacity="0.5"><circle r="2.3" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="292.6 -12;295.3 182" dur="9s" begin="-0.7s" repeatCount="indefinite"/></g><g opacity="0.5"><circle r="2.2" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="303.4 -12;313.1 182" dur="8.3s" begin="-5.6s" repeatCount="indefinite"/></g><g opacity="0.4"><g><g transform="translate(0 0)" stroke="#D2F0FF" stroke-width="1.1" stroke-linecap="round" fill="none" ><path transform="rotate(0)" d="M0 0V-5.6M0 -3.1L1.2 -4.4M0 -3.1L-1.2 -4.4M0 -1.7L0.8 -2.4M0 -1.7L-0.8 -2.4"/><path transform="rotate(60)" d="M0 0V-5.6M0 -3.1L1.2 -4.4M0 -3.1L-1.2 -4.4M0 -1.7L0.8 -2.4M0 -1.7L-0.8 -2.4"/><path transform="rotate(120)" d="M0 0V-5.6M0 -3.1L1.2 -4.4M0 -3.1L-1.2 -4.4M0 -1.7L0.8 -2.4M0 -1.7L-0.8 -2.4"/><path transform="rotate(180)" d="M0 0V-5.6M0 -3.1L1.2 -4.4M0 -3.1L-1.2 -4.4M0 -1.7L0.8 -2.4M0 -1.7L-0.8 -2.4"/><path transform="rotate(240)" d="M0 0V-5.6M0 -3.1L1.2 -4.4M0 -3.1L-1.2 -4.4M0 -1.7L0.8 -2.4M0 -1.7L-0.8 -2.4"/><path transform="rotate(300)" d="M0 0V-5.6M0 -3.1L1.2 -4.4M0 -3.1L-1.2 -4.4M0 -1.7L0.8 -2.4M0 -1.7L-0.8 -2.4"/></g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="8.3s" repeatCount="indefinite"/></g><animateTransform attributeName="transform" type="translate" values="389.8 -12;359.3 182" dur="6.9s" begin="-4.1s" repeatCount="indefinite"/></g><g opacity="0.4"><circle r="2.1" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="329.8 -12;322.5 182" dur="10.2s" begin="-6.4s" repeatCount="indefinite"/></g><g opacity="0.4"><circle r="1.4" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="144 -12;104.1 182" dur="9.7s" begin="-7.2s" repeatCount="indefinite"/></g><g opacity="0.6"><circle r="1.1" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="198.6 -12;203.4 182" dur="8.9s" begin="-7.3s" repeatCount="indefinite"/></g><g opacity="0.5"><circle r="1.7" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="220.1 -12;177.4 182" dur="6.4s" begin="-1.7s" repeatCount="indefinite"/></g><g opacity="0.5"><circle r="1" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="287.1 -12;308.2 182" dur="6.4s" begin="-4.1s" repeatCount="indefinite"/></g><g opacity="0.6"><circle r="1" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="563.1 -12;556.6 182" dur="8.3s" begin="-3.5s" repeatCount="indefinite"/></g><g opacity="0.4"><circle r="2.2" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="434.4 -12;416.4 182" dur="8.8s" begin="-1s" repeatCount="indefinite"/></g><g opacity="0.7"><circle r="1.5" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="360.5 -12;371.6 182" dur="6.6s" begin="-5.6s" repeatCount="indefinite"/></g><g opacity="0.4"><circle r="1.6" fill="#fff"/><animateTransform attributeName="transform" type="translate" values="360.3 -12;352.3 182" dur="10.6s" begin="-5.5s" repeatCount="indefinite"/></g></g>
+  <rect x="-200" y="0" width="120" height="200" fill="url(#sheen)" transform="skewX(-20)"><animate attributeName="x" values="-200;900;900" keyTimes="0;.35;1" dur="6s" begin="2.4s" repeatCount="indefinite"/></rect>
 </g>
-<path d="M26 44V26H44M556 26H574V44M574 148V166H556M44 166H26V148" fill="none" opacity=".55" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="40" y="52" class="m" font-size="14" fill="#fff" opacity=".85" letter-spacing="2">No.01</text>
-<circle cx="520" cy="47" r="4" fill="#7CF0B5" style="animation:pulse 2.4s ease-in-out infinite"/>
-<text x="560" y="52" class="m" font-size="13" fill="#fff" opacity=".85" text-anchor="end">AF</text>
-<text x="28" y="212" class="m" font-size="26" font-weight="700" fill="#EAF2FF">march7th-api</text>
-<text x="572" y="212" font-size="22" fill="#8FD3FF" text-anchor="end">↗</text>
-<text x="28" y="242" font-size="17.5" fill="#8E9BC2">自托管 API 目录与模型网关，密钥、限速、积分一站管理</text>
-<g transform="translate(28 262)"><rect width="67.4" height="26" rx="13" fill="#8FD3FF" fill-opacity=".12" stroke="#8FD3FF" stroke-opacity=".5"/><text x="33.7" y="17.5" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m">Python</text></g><g transform="translate(103.4 262)"><rect width="103.3" height="26" rx="13" fill="#8FD3FF" fill-opacity=".12" stroke="#8FD3FF" stroke-opacity=".5"/><text x="51.65" y="17.5" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m">OpenAI 兼容</text></g><g transform="translate(214.7 262)"><rect width="67.4" height="26" rx="13" fill="#8FD3FF" fill-opacity=".12" stroke="#8FD3FF" stroke-opacity=".5"/><text x="33.7" y="17.5" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m">Docker</text></g>
+<polygon points="40,14 548,14 586,52 586,184 14,184 14,40" fill="none" stroke="#fff" stroke-opacity=".35"/>
+<text x="586" y="318" text-anchor="end" font-size="96" font-weight="900" fill="none" stroke="#8FD3FF" stroke-opacity=".28" stroke-width="2">01</text>
+<g opacity=".16"><animateTransform attributeName="transform" type="rotate" from="0 470 268" to="360 470 268" dur="30s" repeatCount="indefinite"/><g transform="translate(470 268)" stroke="#8FD3FF" stroke-width="3" stroke-linecap="round" fill="none" ><path transform="rotate(0)" d="M0 0V-34M0 -18.7L7.5 -26.5M0 -18.7L-7.5 -26.5M0 -10.2L4.8 -14.3M0 -10.2L-4.8 -14.3"/><path transform="rotate(60)" d="M0 0V-34M0 -18.7L7.5 -26.5M0 -18.7L-7.5 -26.5M0 -10.2L4.8 -14.3M0 -10.2L-4.8 -14.3"/><path transform="rotate(120)" d="M0 0V-34M0 -18.7L7.5 -26.5M0 -18.7L-7.5 -26.5M0 -10.2L4.8 -14.3M0 -10.2L-4.8 -14.3"/><path transform="rotate(180)" d="M0 0V-34M0 -18.7L7.5 -26.5M0 -18.7L-7.5 -26.5M0 -10.2L4.8 -14.3M0 -10.2L-4.8 -14.3"/><path transform="rotate(240)" d="M0 0V-34M0 -18.7L7.5 -26.5M0 -18.7L-7.5 -26.5M0 -10.2L4.8 -14.3M0 -10.2L-4.8 -14.3"/><path transform="rotate(300)" d="M0 0V-34M0 -18.7L7.5 -26.5M0 -18.7L-7.5 -26.5M0 -10.2L4.8 -14.3M0 -10.2L-4.8 -14.3"/></g></g>
+</g>
+<polygon points="30,2 556,2 598,44 598,300 570,328 2,328 2,32" fill="none" stroke="url(#prism)" stroke-width="2.5" filter="url(#glow)"><animate attributeName="stroke-opacity" values=".5;1;.5" dur="4s" repeatCount="indefinite"/></polygon>
+<g transform="translate(556 2)"><g transform="translate(0 18)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur="4s" begin="-3s" repeatCount="indefinite"/>
+<g transform="rotate(40)" filter="url(#glow)"><polygon points="0,-20 6.8,-11 6.8,11 0,20 -6.8,11 -6.8,-11" fill="url(#crys)" stroke="#fff" stroke-opacity=".8" stroke-width="1.2"/><polygon points="0,-20 6.8,-11 6.8,11 0,20" fill="#3F8FD8" fill-opacity=".3"/><path d="M0 -20V20" stroke="#fff" stroke-opacity=".55"/></g></g></g></g>
+<g transform="translate(26 26)"><polygon points="16,0 29.9,8 29.9,24 16,32 2.1,24 2.1,8" fill="#8FD3FF" fill-opacity=".25" stroke="#fff" stroke-opacity=".8" filter="url(#glow)"/><text x="16" y="21" text-anchor="middle" class="m" font-size="13" font-weight="900" fill="#fff">01</text></g>
+<text x="62" y="47" class="m" font-size="12" fill="#fff" opacity=".85" letter-spacing="3">MEMORY SHARD</text>
+<text x="28" y="226" class="m" font-size="27" font-weight="800" fill="#F0F5FF">march7th-api</text>
+<text x="28" y="256" font-size="17.5" fill="#9AA6CC">自托管 API 目录与模型网关，密钥、限速、积分一站管理</text>
+<g transform="translate(28 274)"><rect width="67.4" height="28" rx="6" fill="#8FD3FF" fill-opacity=".16" stroke="#8FD3FF" stroke-opacity=".7"/><text x="33.7" y="19" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m" font-weight="700">Python</text></g><g transform="translate(103.4 274)"><rect width="103.3" height="28" rx="6" fill="#8FD3FF" fill-opacity=".16" stroke="#8FD3FF" stroke-opacity=".7"/><text x="51.7" y="19" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m" font-weight="700">OpenAI 兼容</text></g><g transform="translate(214.7 274)"><rect width="67.4" height="28" rx="6" fill="#8FD3FF" fill-opacity=".16" stroke="#8FD3FF" stroke-opacity=".7"/><text x="33.7" y="19" text-anchor="middle" font-size="13" fill="#8FD3FF" class="m" font-weight="700">Docker</text></g>
 </svg>
