@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="March7th 三月七：一块永不融化的冰里冻着 03.07，冰箭划过夜空，拍立得在周围漂浮。把好奇心写成工具，把想象力做成交互。Web 应用、开发者工具与 Minecraft 自动化。" />
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/hero.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/hero.svg" width="100%" alt="March7th 三月七：一块永不融化的冰里冻着 03.07，冰箭划过，拍立得在周围漂浮。把好奇心写成工具，把想象力做成交互。Web 应用、开发者工具与 Minecraft 自动化。" /></picture>
 </p>
 
 <p align="center">
@@ -10,22 +10,22 @@
 </p>
 
 <p align="center">
-  <img src="./assets/story.svg" width="100%" alt="名字，来自一块冰：她在一块永不融化的冰里醒来，忘了从前的一切，于是用醒来那天的日期给自己取了名字，再用相机认真记下之后的每一个瞬间。我们借用这个名字：把每个想法都好好保存，做成能用、能玩、也值得回看的作品。" />
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/story.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/story.svg" width="100%" alt="名字，来自一块冰：她在一块永不融化的冰里醒来，忘了从前的一切，于是用醒来那天的日期给自己取了名字，再用相机认真记下之后的每一个瞬间。我们借用这个名字：把每个想法都好好保存，做成能用、能玩、也值得回看的作品。" /></picture>
 </p>
 
 <br />
 
 <p align="center">
-  <img src="./assets/h-shards.svg" width="100%" alt="01 记忆碎片：每个项目，都是冻住的一个好瞬间" />
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/h-shards.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/h-shards.svg" width="100%" alt="01 记忆碎片：每个项目，都是冻住的一个好瞬间" /></picture>
 </p>
 
 <p align="center">
-  <a href="https://github.com/March7thTeam/march7th-api"><img src="./assets/projects/march7th-api.svg" width="49%" alt="march7th-api：自托管 API 目录与模型网关，密钥、限速、积分一站管理。Python、OpenAI 兼容、Docker。" /></a>
-  <a href="https://github.com/March7thTeam/file-download-proxy"><img src="./assets/projects/file-download-proxy.svg" width="49%" alt="file-download-proxy：只放行白名单域名的流式下载代理，支持 Range，防 SSRF。" /></a>
-  <a href="https://github.com/March7thTeam/design-atlas"><img src="./assets/projects/design-atlas.svg" width="49%" alt="design-atlas：浏览器里的前端设计工作台，拼装页面、调整样式、导出源码。" /></a>
-  <a href="https://github.com/March7thTeam/fog-harbor-archive"><img src="./assets/projects/fog-harbor-archive.svg" width="49%" alt="fog-harbor-archive：悬疑解谜网页游戏，在雾港调查室里重建证据链。" /></a>
-  <a href="https://github.com/March7thTeam/mc-bot"><img src="./assets/projects/mc-bot.svg" width="49%" alt="mc-bot：Minecraft 合作生存机器人，可插拔 AI 后端，支持工作流与 MCP。" /></a>
-  <a href="https://github.com/March7thTeam/CloudPaste/tree/main/march7th-paste"><img src="./assets/projects/march7th-paste.svg" width="49%" alt="March7th Paste 4.0：在线剪贴板与文件分享，支持 Markdown、密码保护与阅后即焚。" /></a>
+  <a href="https://github.com/March7thTeam/march7th-api"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/projects/march7th-api.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/projects/march7th-api.svg" width="49%" alt="march7th-api：自托管 API 目录与模型网关，密钥、限速、积分一站管理。Python、OpenAI 兼容、Docker。" /></picture></a>
+  <a href="https://github.com/March7thTeam/file-download-proxy"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/projects/file-download-proxy.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/projects/file-download-proxy.svg" width="49%" alt="file-download-proxy：只放行白名单域名的流式下载代理，支持 Range，防 SSRF。" /></picture></a>
+  <a href="https://github.com/March7thTeam/design-atlas"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/projects/design-atlas.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/projects/design-atlas.svg" width="49%" alt="design-atlas：浏览器里的前端设计工作台，拼装页面、调整样式、导出源码。" /></picture></a>
+  <a href="https://github.com/March7thTeam/fog-harbor-archive"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/projects/fog-harbor-archive.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/projects/fog-harbor-archive.svg" width="49%" alt="fog-harbor-archive：悬疑解谜网页游戏，在雾港调查室里重建证据链。" /></picture></a>
+  <a href="https://github.com/March7thTeam/mc-bot"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/projects/mc-bot.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/projects/mc-bot.svg" width="49%" alt="mc-bot：Minecraft 合作生存机器人，可插拔 AI 后端，支持工作流与 MCP。" /></picture></a>
+  <a href="https://github.com/March7thTeam/CloudPaste/tree/main/march7th-paste"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/projects/march7th-paste.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/projects/march7th-paste.svg" width="49%" alt="March7th Paste 4.0：在线剪贴板与文件分享，支持 Markdown、密码保护与阅后即焚。" /></picture></a>
 </p>
 
 <details>
@@ -48,11 +48,11 @@
 <br />
 
 <p align="center">
-  <img src="./assets/h-arrows.svg" width="100%" alt="02 四箭定格：我们怎么做事" />
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/h-arrows.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/h-arrows.svg" width="100%" alt="02 四箭定格：我们怎么做事" /></picture>
 </p>
 
 <p align="center">
-  <img src="./assets/archery.svg" width="100%" alt="四箭定格：拉弓（先想清楚为谁而做，再定下它的样子）、瞄准（原型落在真实页面，看得见才算数）、放箭（实现与回归测试，每一步都能回退）、定格（独立审查，留存证据，确认之后再上线）。" />
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/archery.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/archery.svg" width="100%" alt="四箭定格：拉弓（先想清楚为谁而做，再定下它的样子）、瞄准（原型落在真实页面，看得见才算数）、放箭（实现与回归测试，每一步都能回退）、定格（独立审查，留存证据，确认之后再上线）。" /></picture>
 </p>
 
 每一支箭，都要能在仓库里找到落点：
@@ -69,7 +69,7 @@
 <br />
 
 <p align="center">
-  <img src="./assets/h-join.svg" width="100%" alt="03 一起入镜：反馈、讨论、贡献、安全报告" />
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/h-join.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/h-join.svg" width="100%" alt="03 一起入镜：反馈、讨论、贡献、安全报告" /></picture>
 </p>
 
 - **遇到问题**：先查对应项目的 README 和已有 Issues，再提供版本、复现步骤及脱敏日志。
@@ -82,7 +82,7 @@
 <br />
 
 <p align="center">
-  <img src="./assets/footer.svg" width="100%" alt="咔嚓——这一刻，存进相册。一面挂满拍立得的照片墙，每张对应一个项目。" />
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/March7thTeam/.github/raw/main/profile/assets/dark/footer.svg" /><img src="https://github.com/March7thTeam/.github/raw/main/profile/assets/light/footer.svg" width="100%" alt="咔嚓——这一刻，存进相册。一面挂满拍立得的照片墙，每张对应一个项目。" /></picture>
 </p>
 
-<sub>March7thTeam 是独立的项目协作组织，与 HoYoverse / 米哈游无隶属关系。页面中的冰晶、冰箭、日历与拍立得等图形均为原创矢量绘制，不含官方美术素材。代码与素材的使用须遵循各仓库的许可证及第三方授权说明。主页素材由 <code>scripts/build-profile-assets.mjs</code> 生成。</sub>
+<sub>March7thTeam 是独立的项目协作组织，与 HoYoverse / 米哈游无隶属关系。页面中的冰晶、冰箭、靶心、日历与拍立得等图形均为原创矢量绘制，不含官方美术素材。代码与素材的使用须遵循各仓库的许可证及第三方授权说明。主页素材由 <code>scripts/build-profile-assets.mjs</code> 生成，背景透明，按 GitHub 浅色 / 深色主题自动切换。</sub>
