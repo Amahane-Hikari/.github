@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 230" width="1200" height="230" role="img" aria-labelledby="t d">
+<title id="t">咔嚓。</title><desc id="d">愿每一次按下快门，都留下值得回看的东西。</desc>
+<style>
+  text{font-family:'Segoe UI','Helvetica Neue','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif}
+  .m{font-family:ui-monospace,'SFMono-Regular','Cascadia Mono',Consolas,'Liberation Mono',monospace}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A0F1F"/><stop offset="1" stop-color="#141B3A"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF8FC0"/><stop offset="1" stop-color="#8FD3FF"/></linearGradient><style>@keyframes tw{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}@keyframes iris{0%,100%{transform:scale(1)}50%{transform:scale(.82)}}</style></defs>
+<rect width="1200" height="230" rx="22" fill="url(#bg)"/>
+<g transform="translate(600 62)"><g style="animation:iris 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center">
+  <circle r="26" fill="none" stroke="url(#brand)" stroke-width="4"/><path transform="rotate(0)" d="M0 -26L15 -3" stroke="#C9ECFF" stroke-width="3" stroke-linecap="round"/><path transform="rotate(60)" d="M0 -26L15 -3" stroke="#C9ECFF" stroke-width="3" stroke-linecap="round"/><path transform="rotate(120)" d="M0 -26L15 -3" stroke="#C9ECFF" stroke-width="3" stroke-linecap="round"/><path transform="rotate(180)" d="M0 -26L15 -3" stroke="#C9ECFF" stroke-width="3" stroke-linecap="round"/><path transform="rotate(240)" d="M0 -26L15 -3" stroke="#C9ECFF" stroke-width="3" stroke-linecap="round"/><path transform="rotate(300)" d="M0 -26L15 -3" stroke="#C9ECFF" stroke-width="3" stroke-linecap="round"/>
+</g></g>
+<text x="600" y="134" text-anchor="middle" font-size="36" font-weight="700" fill="#EAF2FF">愿每一次按下快门，都留下值得回看的东西。</text>
+<text x="600" y="168" text-anchor="middle" font-size="18" fill="#8E9BC2">Take it slow. Ship it well. Keep the frames that matter.</text>
+<text x="600" y="204" text-anchor="middle" class="m" font-size="13" fill="#8FD3FF" letter-spacing="3">MARCH7TH · EST. 2022 · 03.07</text>
+<path d="M300 78Q300 90 312 90Q300 90 300 102Q300 90 288 90Q300 90 300 78Z" fill="#FFC2DD" style="transform-origin:300px 90px;animation:tw 3.2s ease-in-out 0.2s infinite"/><path d="M900 70Q900 80 910 80Q900 80 900 90Q900 80 890 80Q900 80 900 70Z" fill="#C9ECFF" style="transform-origin:900px 80px;animation:tw 3.2s ease-in-out 1s infinite"/><path d="M1000 136Q1000 150 1014 150Q1000 150 1000 164Q1000 150 986 150Q1000 150 1000 136Z" fill="#FF8FC0" style="transform-origin:1000px 150px;animation:tw 3.2s ease-in-out 1.6s infinite"/><path d="M200 151Q200 160 209 160Q200 160 200 169Q200 160 191 160Q200 160 200 151Z" fill="#8FD3FF" style="transform-origin:200px 160px;animation:tw 3.2s ease-in-out 2.1s infinite"/>
+</svg>
