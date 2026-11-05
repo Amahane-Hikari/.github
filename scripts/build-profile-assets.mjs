@@ -1,4 +1,4 @@
-// Generates the SVG artwork used by profile/README.md  ·  design t003 "Eternal Ice · Clear"
+// Generates the SVG artwork used by profile/README.md  ·  design t004 "Eternal Ice · Clear"
 //   node scripts/build-profile-assets.mjs
 // No dependencies. Every SVG is self-contained (system font stacks, no external requests) and has a
 // transparent background. Two palettes are written — profile/assets/light and profile/assets/dark —
@@ -505,24 +505,41 @@ ${[[360, 50], [440, 80], [520, 60], [400, 102]].map(([x, y]) => `<circle cx="${x
 
 // ---------- workflow: four arrows, one freeze-frame ----------
 function archery() {
-  const W = 1200, H = 400, Y = 128, x0 = 104;
+  // The archer stands on the left: string toward her, the belly of the bow and the arrow point at the targets.
+  const W = 1200, H = 400, Y = 128;
   const steps = [
     ['01', '拉弓', 'DRAW', ['先想清楚为谁而做', '再定下它的样子'], C.ice, 300],
     ['02', '瞄准', 'AIM', ['原型落在真实页面', '看得见才算数'], C.pink, 560],
     ['03', '放箭', 'RELEASE', ['实现与回归测试', '每一步都能回退'], C.lav, 820],
     ['04', '定格', 'FREEZE', ['独立审查，留存证据', '确认之后再上线'], C.lock, 1080],
   ];
-  const D = 7, rel = 0.16, hit = 0.56;
-  const tAt = (x) => f3(rel + ((hit - rel) * (x - x0)) / (1080 - x0));
+  const D = 7, LEN = 120, rel = 0.18, hit = 0.56;
+  const S = 146, E = 1072; // arrow origin (its tip sits at +21) at full draw, and when it sticks in the last target
   const tm = `dur="${D}s" repeatCount="indefinite"`;
+  const tAt = (x) => f3(rel + ((hit - rel) * (x - 8 - S)) / (E - S));
+
+  // bow + string keyframes: rest -> full draw -> hold -> release with a damped twang
+  const kt = '0;.04;.14;.18;.195;.21;.225;.24;.26;1';
+  const sx = [78, 78, 26, 26, 94, 66, 86, 74, 78, 78];
+  const tx = [78, 78, 70, 70, 80, 77, 79, 78, 78, 78];
+  const ty = [84, 84, 80, 80, 85, 84, 84, 84, 84, 84];
+  const cx = [140, 140, 148, 148, 137, 141, 139, 140, 140, 140];
+  const arc = (i) => `M${tx[i] + 10} ${Y - ty[i] - 18}q-12 6 -10 18Q${cx[i]} ${Y} ${tx[i]} ${Y + ty[i]}q-2 12 10 18`;
+  const str = (i) => `M${tx[i]} ${Y - ty[i]}L${sx[i]} ${Y}L${tx[i]} ${Y + ty[i]}`;
+  const vals = (fn) => sx.map((_, i) => fn(i)).join(';');
+
   const targets = steps.map(([no, zh, en, lines, col, x], i) => {
     const t = Number(tAt(x));
-    const k = `0;${f3(Math.max(t - 0.005, 0))};${f3(t + 0.01)};.92;1`;
+    const a = f3(Math.max(t - 0.004, 0)), b = f3(t + 0.01), c = f3(t + 0.13);
+    const k = `0;${a};${b};.92;1`;
+    const sparks = Array.from({ length: 8 }, (_, j) => `<path transform="rotate(${j * 45 + 22.5})" d="M0 -16V-24" stroke="${j % 2 ? C.hi : col}" stroke-width="2.4" stroke-linecap="round"/>`).join('');
     return `<g transform="translate(${x} ${Y})">
 <g>${spin(0, 0, 22 + i * 4, i % 2 ? -1 : 1)}<polygon points="${hexPts(0, 0, 50)}" fill="none" stroke="${col}" stroke-width="2.2" stroke-dasharray="${i % 2 ? '10 6' : 'none'}"/></g>
-<polygon points="${hexPts(0, 0, 36, 30)}" fill="${col}" fill-opacity=".08" stroke="${col}" stroke-opacity=".55"/>
-<circle r="12" fill="${col}" opacity=".3"><animate attributeName="opacity" values=".3;.3;.9;.5;.3" keyTimes="${k}" ${tm}/><animate attributeName="r" values="12;12;20;14;12" keyTimes="${k}" ${tm}/></circle>
-<g opacity="0"><animate attributeName="opacity" values="0;0;.9;0;0" keyTimes="0;${f3(Math.max(t - 0.005, 0))};${f3(t + 0.01)};${f3(t + 0.12)};1" ${tm}/><circle r="10" fill="none" stroke="${col}" stroke-width="2"><animate attributeName="r" values="10;10;64;64" keyTimes="0;${f3(t)};${f3(t + 0.12)};1" ${tm}/></circle></g>
+<polygon points="${hexPts(0, 0, 50)}" fill="none" stroke="${C.hi}" stroke-width="2.6" opacity="0"><animate attributeName="opacity" values="0;0;.9;0;0" keyTimes="0;${a};${b};${c};1" ${tm}/></polygon>
+<polygon points="${hexPts(0, 0, 36, 30)}" fill="${col}" fill-opacity=".08" stroke="${col}" stroke-opacity=".55"><animate attributeName="fill-opacity" values=".08;.08;.4;.16;.08" keyTimes="${k}" ${tm}/></polygon>
+<circle r="12" fill="${col}" opacity=".3"><animate attributeName="opacity" values=".3;.3;.95;.55;.3" keyTimes="${k}" ${tm}/><animate attributeName="r" values="12;12;20;14;12" keyTimes="${k}" ${tm}/></circle>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;${a};${b};${c};1" ${tm}/><g><animateTransform attributeName="transform" type="scale" values="1;1;1;2.4;2.4" keyTimes="0;${a};${b};${c};1" ${tm}/>${sparks}</g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;.9;0;0" keyTimes="0;${a};${b};${c};1" ${tm}/><circle r="10" fill="none" stroke="${col}" stroke-width="2"><animate attributeName="r" values="10;10;10;66;66" keyTimes="0;${a};${b};${c};1" ${tm}/></circle></g>
 <text y="-66" text-anchor="middle" class="m" font-size="13" fill="${col}" letter-spacing="3">${no} · ${en}</text>
 <text y="118" text-anchor="middle" font-size="40" font-weight="900" fill="${C.text}">${zh}</text>
 <rect x="-24" y="132" width="48" height="5" rx="2.5" fill="${col}"/>
@@ -530,29 +547,44 @@ function archery() {
 <text y="200" text-anchor="middle" font-size="19" fill="${C.mute}">${esc(lines[1])}</text>
 </g>`;
   }).join('');
-  const pulled = `M86 ${Y - 82}L46 ${Y}L86 ${Y + 82}`, rest = `M86 ${Y - 82}L86 ${Y}L86 ${Y + 82}`;
+
+  // frost gathering at the arrowhead while the bow is held at full draw
+  const hx = S + 21;
+  const charge = [[-26, -22], [24, -26], [30, 20], [-22, 26]].map(([dx, dy], i) => {
+    const s0 = f3(0.05 + i * 0.015);
+    return `<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;${s0};${f3(0.08 + i * 0.015)};.165;.18;1" ${tm}/><animateTransform attributeName="transform" type="translate" values="${hx + dx} ${Y + dy};${hx + dx} ${Y + dy};${hx} ${Y};${hx} ${Y}" keyTimes="0;${s0};.17;1" ${tm}/><path d="${starPath(0, 0, 5)}" fill="${i % 2 ? C.pink : C.ice}"/></g>`;
+  }).join('');
+  const chargeGlow = `<circle cx="${hx}" cy="${Y}" r="0" fill="${C.ice}" opacity=".35"><animate attributeName="r" values="0;0;14;0;0" keyTimes="0;.08;.175;.185;1" ${tm}/></circle>`;
+
+  // the arrow (nocked on the string), with a light streak and two fading echoes in flight
+  const arrow = `<g><animateTransform attributeName="transform" type="translate" values="${78 + LEN - 120 + 120} ${Y};${78 + LEN} ${Y};${S} ${Y};${S} ${Y};${E} ${Y};${E} ${Y}" keyTimes="0;.04;.14;${rel};${hit};1" ${tm}/><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.03;.86;.9;1" ${tm}/>
+<rect x="${-LEN - 200}" y="-1.2" width="200" height="2.4" rx="1.2" fill="url(#tail)" opacity="0"><animate attributeName="opacity" values="0;0;.8;.8;0;0" keyTimes="0;${rel};${f3(rel + 0.02)};${f3(hit - 0.03)};${hit};1" ${tm}/></rect>
+${arrowShape(LEN)}</g>`;
+  const echo = (dl, op) => `<g opacity="0"><animateTransform attributeName="transform" type="translate" values="${S} ${Y};${S} ${Y};${E} ${Y};${E} ${Y}" keyTimes="0;${f3(rel + dl)};${f3(hit + dl)};1" ${tm}/><animate attributeName="opacity" values="0;0;${op};${op};0;0" keyTimes="0;${f3(rel + dl)};${f3(rel + dl + 0.01)};${f3(hit + dl - 0.02)};${f3(hit + dl)};1" ${tm}/>${arrowShape(50)}</g>`;
+  const trail = 1080 - hx;
+
   return `${svgOpen(W, H, '四箭定格：拉弓、瞄准、放箭、定格', '我们的工作流像一次射箭：先想清楚为谁而做（拉弓），在真实页面里验收原型（瞄准），带回归测试地实现（放箭），独立审查、留存证据后再上线（定格）。')}
 <defs>${baseDefs(W)}<clipPath id="r"><rect width="${W}" height="${H}"/></clipPath>
 <linearGradient id="bow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.pink}"/><stop offset=".5" stop-color="${C.lav}"/><stop offset="1" stop-color="${C.ice}"/></linearGradient></defs>
 <g clip-path="url(#r)">
 ${blobs([[600, 330, 520, 90, 'blobL', 16]])}
 ${stars(W, H, 50, 91)}
-<path d="M${x0} ${Y}H1080" stroke="${C.line}" stroke-width="2" stroke-dasharray="3 6"/>
-<path d="M${x0} ${Y}H1080" stroke="url(#brand)" stroke-width="3.5" stroke-dasharray="976" stroke-dashoffset="976"><animate attributeName="stroke-dashoffset" values="976;976;0;0;976" keyTimes="0;${rel};${hit};.94;1" ${tm}/><animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;.6;.88;.94;1" ${tm}/></path>
+<path d="M${hx} ${Y}H1080" stroke="${C.line}" stroke-width="2" stroke-dasharray="3 6"/>
+<path d="M${hx} ${Y}H1080" stroke="url(#brand)" stroke-width="3.5" stroke-dasharray="${trail}" stroke-dashoffset="${trail}"><animate attributeName="stroke-dashoffset" values="${trail};${trail};0;0;${trail}" keyTimes="0;${rel};${hit};.94;1" ${tm}/><animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;.6;.88;.94;1" ${tm}/></path>
 ${targets}
-<!-- bow -->
-<g>
-<path d="M86 ${Y - 82}Q24 ${Y} 86 ${Y + 82}" fill="none" stroke="url(#bow)" stroke-width="6" stroke-linecap="round"/>
-<path d="M86 ${Y - 82}q-8 -14 4 -22M86 ${Y + 82}q-8 14 4 22" fill="none" stroke="${C.pink}" stroke-width="3" stroke-linecap="round"/>
-<g>${snow(40, Y, 10, C.ice, 1.8)}</g>
-<path d="${rest}" fill="none" stroke="${C.hi}" stroke-width="1.5"><animate attributeName="d" values="${rest};${pulled};${pulled};${rest};${rest}" keyTimes="0;.12;${rel};${f3(rel + 0.02)};1" ${tm}/></path>
-</g>
-<!-- the arrow -->
-<g><animateTransform attributeName="transform" type="translate" values="${x0} ${Y};${x0 - 40} ${Y};${x0 - 40} ${Y};1080 ${Y};1080 ${Y}" keyTimes="0;.12;${rel};${hit};1" ${tm}/><animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;.85;.9;.92;1" ${tm}/>${arrowShape(120)}</g>
+<!-- bow: belly toward the targets, string toward the archer -->
+<path d="${arc(0)}" fill="none" stroke="url(#bow)" stroke-width="6" stroke-linecap="round"><animate attributeName="d" values="${vals(arc)}" keyTimes="${kt}" ${tm}/></path>
+<path d="${str(0)}" fill="none" stroke="${C.hi}" stroke-width="1.6" stroke-linejoin="round"><animate attributeName="d" values="${vals(str)}" keyTimes="${kt}" ${tm}/></path>
+<rect x="103" y="${Y - 15}" width="12" height="30" rx="5" fill="${C.pink}"/>
+<g transform="translate(109 ${Y + 15})"><g><animateTransform attributeName="transform" type="rotate" values="0;0;-14;10;-6;0;0" keyTimes="0;${rel};${f3(rel + 0.03)};${f3(rel + 0.07)};${f3(rel + 0.11)};${f3(rel + 0.15)};1" ${tm}/>
+<path d="M0 0V20" stroke="${C.pink}" stroke-width="1.5"/>${snow(0, 28, 8, C.ice, 1.6)}</g></g>
+${chargeGlow}${charge}
+${echo(0.012, 0.35)}${echo(0.024, 0.18)}
+${arrow}
 <!-- freeze frame at the last target -->
-<g transform="translate(1080 ${Y})" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;${hit};${f3(hit + 0.02)};.88;.94" ${tm}/>
-${snow(0, 0, 40, C.hi, 2.6)}
-<g transform="translate(36 -66) rotate(10)"><rect x="-50" y="-16" width="100" height="32" rx="6" fill="${C.hot}" stroke="${C.node}" stroke-width="3"/><text x="0" y="7" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">咔嚓！定格</text></g></g>
+<g transform="translate(1080 ${Y})" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;${hit};${f3(hit + 0.01)};.88;.94;1" ${tm}/>
+<g><animateTransform attributeName="transform" type="scale" values="0;0;1.2;1;1" keyTimes="0;${hit};${f3(hit + 0.04)};${f3(hit + 0.07)};1" ${tm}/><g>${spin(0, 0, 24)}${snow(0, 0, 40, C.hi, 2.6)}</g></g>
+<g transform="translate(36 -66) rotate(10)"><g><animateTransform attributeName="transform" type="scale" values="0;0;0;1.25;1;1" keyTimes="0;${hit};${f3(hit + 0.03)};${f3(hit + 0.07)};${f3(hit + 0.1)};1" ${tm}/><rect x="-50" y="-16" width="100" height="32" rx="6" fill="${C.hot}" stroke="${C.node}" stroke-width="3"/><text x="0" y="7" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">咔嚓！定格</text></g></g></g>
 ${snowfall(W, H, 20, 515, { min: 9, max: 14, op: 0.6 })}
 </g>
 </svg>`;
